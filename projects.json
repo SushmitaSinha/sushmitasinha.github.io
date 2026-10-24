@@ -1,0 +1,202 @@
+[
+  {
+    "id": "payment-sentinel",
+    "name": "Payment Sentinel",
+    "category": "Predictive AI",
+    "status": "Built prototype",
+    "tag": "Risk \u2192 reason \u2192 review",
+    "problem": "Payment failures create repair queues and delay straight-through processing.",
+    "solution": "A predictive payment-risk prototype connecting a model experiment, a prediction API and an operations-facing interface.",
+    "stack": [
+      "XGBoost",
+      "FastAPI",
+      "SHAP",
+      "Lovable"
+    ],
+    "decisions": [
+      "Compared Logistic Regression and XGBoost on synthetic payments.",
+      "Connected prediction to understandable risk explanations and a review workflow.",
+      "Kept proposed repair logic separate from the prediction model."
+    ],
+    "evidence": "Prior project discussions describe a Colab experiment, Render API and Lovable interface. Training used synthetic transactions; production impact has not been established.",
+    "next": "Attach the notebook, model card, current evaluation report and a recorded walkthrough. Confirm personal versus team contribution before interviews.",
+    "demo_url": null
+  },
+  {
+    "id": "storytelling-studio",
+    "name": "AI Storytelling Studio",
+    "category": "Generative AI",
+    "status": "Local prototype",
+    "tag": "Story \u2192 storyboard \u2192 screen",
+    "problem": "Creating a narrated short requires coordinating scripts, scenes, images, voice and rendering.",
+    "solution": "A local creative workflow with human review between story development and generated media.",
+    "stack": [
+      "Python",
+      "Ollama",
+      "Stable Diffusion",
+      "FFmpeg"
+    ],
+    "decisions": [
+      "Structured the work into approved milestones rather than one opaque generation.",
+      "Benchmarked image generation against an Apple M1 memory and latency budget.",
+      "Kept motion generation behind an approval step."
+    ],
+    "evidence": "Project discussions record local backend/frontend tests and a rendered Midnight Line narrated slideshow. The Runway workflow was implemented but disabled; paid motion generation is not evidenced.",
+    "next": "Add a short export, architecture, selected test output and a sanitized source repository. Localhost addresses are not public demos.",
+    "demo_url": null
+  },
+  {
+    "id": "pickwise",
+    "name": "PickWise",
+    "category": "Agentic AI",
+    "status": "Design proposal",
+    "tag": "Evidence before influence",
+    "problem": "Beginner affiliate creators spend time switching between product research, graphics and publishing tools.",
+    "solution": "A supervised workflow to research up to five products, draft a Pinterest pin and matching guide, check evidence and request approval.",
+    "stack": [
+      "Agent workflows",
+      "Evaluation design",
+      "Human approval"
+    ],
+    "decisions": [
+      "Bound product research and correction attempts.",
+      "Use authorized product photos or a text-based comparison.",
+      "Invalidate approval whenever the content changes; publish the guide before the pin."
+    ],
+    "evidence": "Team 8 capstone canvas explicitly states design proposal, not implemented or evaluated. The 60\u201370+ minute baseline is retrospective, not a timed benchmark. Coach is a stretch role.",
+    "next": "Build one complete content package and run the golden cases. Measure active human effort separately from runtime. Team: Aswin, Sushmita and Vinil Bandaru.",
+    "demo_url": null
+  },
+  {
+    "id": "veritas-screen",
+    "name": "VERITAS SCREEN",
+    "category": "Predictive AI",
+    "status": "Demo documented",
+    "tag": "Screen \u2192 explain \u2192 escalate",
+    "problem": "Sanctions-screening workflows need to distinguish actionable matches from noisy alerts.",
+    "solution": "A capstone screening demonstration with synthetic cases, staged decisions and analyst-review paths.",
+    "stack": [
+      "Screening workflows",
+      "Synthetic data",
+      "Product strategy"
+    ],
+    "decisions": [
+      "Make release, analyst-review and block paths visible.",
+      "Use synthetic cases to demonstrate decision behavior.",
+      "Separate aspirational false-alert reduction from measured performance."
+    ],
+    "evidence": "Retrieved history describes a clickable HTML demo and leadership materials. Co-created with Aswin Govarthanan. Original runnable source has not been recovered in this portfolio.",
+    "next": "Recover the demo and deck; document which stages are simulated and how the screening quality would be evaluated.",
+    "demo_url": null
+  },
+  {
+    "id": "charger-diagnosis",
+    "name": "EV Charger Health Diagnosis",
+    "category": "AI Operations",
+    "status": "Product specification",
+    "tag": "Logs \u2192 evidence \u2192 diagnosis",
+    "problem": "Operations teams must inspect large volumes of OCPP messages to investigate charging issues.",
+    "solution": "A specified operations copilot combining deterministic event processing with explainable LLM diagnosis.",
+    "stack": [
+      "OCPP",
+      "Log processing",
+      "LLM reasoning"
+    ],
+    "decisions": [
+      "Reconstruct sessions and compress repetitive telemetry before model reasoning.",
+      "Separate observed facts from inferred root causes.",
+      "Return supporting evidence, missing data and suggested actions."
+    ],
+    "evidence": "Project-Context.txt establishes the product and technical objectives, not a deployed implementation. Sub-minute investigation is a goal, not a measured result.",
+    "next": "Create a sanitized sample-log demo and evaluate diagnosis against expert-labeled incidents.",
+    "demo_url": null
+  },
+  {
+    "id": "release-dashboard",
+    "name": "Release Intelligence Dashboard",
+    "category": "Product Systems",
+    "status": "Prototype discussed",
+    "tag": "Delivery data \u2192 clear decisions",
+    "problem": "Release information spread across tasks and inconsistent labels makes product reporting difficult.",
+    "solution": "A release reporting dashboard developed with Lovable and Supabase, with product/month filters and PDF export work.",
+    "stack": [
+      "Lovable",
+      "Supabase",
+      "Reporting UX"
+    ],
+    "decisions": [
+      "Normalize hotfix and XP release labels.",
+      "Exclude operational configuration categories from product-release views.",
+      "Iterate on missing versions and export readability."
+    ],
+    "evidence": "Prior discussions document dashboard iterations. The current live build and source have not been inspected. This is product tooling; no AI feature is claimed.",
+    "next": "Recreate with fictional products and sample releases before sharing externally. Employer data and internal task details are excluded.",
+    "demo_url": null
+  },
+  {
+    "id": "ocpp-retrieval",
+    "name": "OCPP Knowledge & Log Lab",
+    "category": "AI Operations",
+    "status": "Exploration",
+    "tag": "Protocol knowledge, made searchable",
+    "problem": "Protocol documentation and raw charger events are difficult to navigate during investigation.",
+    "solution": "Exploration of OCPP knowledge ingestion in Langflow and charger-event analysis.",
+    "stack": [
+      "Langflow",
+      "RAG exploration",
+      "OCPP"
+    ],
+    "decisions": [
+      "Explore retrieval separately from operational diagnosis.",
+      "Inspect timestamp completeness before reasoning about event order.",
+      "Keep raw employer and customer logs out of public artifacts."
+    ],
+    "evidence": "Prior discussions reference ingestion and log-analysis experiments. Retrieval quality and a working public service are not established.",
+    "next": "Publish a small public-specification experiment with citations and a retrieval evaluation set. Keep distinct from the diagnosis concept.",
+    "demo_url": null
+  },
+  {
+    "id": "travelmate",
+    "name": "TravelMate AI",
+    "category": "Product Systems",
+    "status": "Frontend prototype",
+    "tag": "Plan \u2192 compare \u2192 itinerary",
+    "problem": "Travelers coordinate accommodation, transport and rides across disconnected choices.",
+    "solution": "A React/Tailwind concept interface with optional selections, dynamic totals, mock payment and itinerary export.",
+    "stack": [
+      "React",
+      "Tailwind",
+      "Mock data"
+    ],
+    "decisions": [
+      "Let travelers choose only the services they need.",
+      "Show totals as selections change.",
+      "Demonstrate the journey using mock transactions."
+    ],
+    "evidence": "Retrieved history describes a responsive frontend prototype. Live booking APIs and an AI backend are not evidenced.",
+    "next": "Recover the original source and walkthrough; describe the AI proposition separately from implemented UI.",
+    "demo_url": null
+  },
+  {
+    "id": "agent-teardown",
+    "name": "Agent Behavior Teardown",
+    "category": "Agentic AI",
+    "status": "Completed analysis",
+    "tag": "Test the behavior behind the promise",
+    "problem": "Conversational interfaces can appear more autonomous than the actions they actually perform.",
+    "solution": "A structured assessment of Copilot in Teams using happy-path, missing-information, ambiguity, high-stakes and probe scenarios.",
+    "stack": [
+      "Behavioral testing",
+      "Human oversight",
+      "Product critique"
+    ],
+    "decisions": [
+      "Judge observable tool use and execution rather than the agent label.",
+      "Probe escalation and uncertainty handling.",
+      "Translate failure modes into product and guardrail improvements."
+    ],
+    "evidence": "Completed course analysis is described in retrieved files. This is an evaluation case study, not a product implementation.",
+    "next": "Add sanitized test inputs, observed outputs and the assessment rubric.",
+    "demo_url": null
+  }
+]
